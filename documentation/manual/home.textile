@@ -82,7 +82,6 @@ h2. Examples of usage
 
 On GitHub "https://github.com/rafaelfelini/playujs-samples":https://github.com/rafaelfelini/playujs-samples
 
-
 h2. Credits
 
-* "https://github.com/rails/jquery-ujs/wiki":https://github.com/rails/jquery-ujs/wiki team for the great work with rails.js
+* "https://github.com/rails/jquery-ujs":https://github.com/rails/jquery-ujs team for the great work with rails.js
