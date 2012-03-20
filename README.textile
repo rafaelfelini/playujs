@@ -58,11 +58,11 @@ bc. <form id="withajax" action="@{Application.index()}" method="post" data-remot
 
 h3. Controller
 
-In your controller just call render(); than Play! will automaticaly render the .json template, using content negotiation feature "http://www.playframework.org/documentation/1.2.4/routes#content-negotiation":http://www.playframework.org/documentation/1.2.4/routes#content-negotiation
+In your controller just call render(); then Play! will automaticaly render the .json template, using content negotiation feature "http://www.playframework.org/documentation/1.2.4/routes#content-negotiation":http://www.playframework.org/documentation/1.2.4/routes#content-negotiation
 
 h3. Template
 
-Here live the fun. In your .json template you will write your javascript that will be executed in the client. And here you can do what you want, trigger an effect, update areas, etc.
+Here lies the fun. In your .json template you will write your javascript that will be executed on the client. And here you can do what you want, trigger an effect, update areas, etc.
 When you need to include an template you <b>MUST</b> use the #{escapejs 'yourtemplate.html' /} , that will escapes carriage returns and single and double quotes for JavaScript segments, ensuring that will be a valid javascript.
 
 Example:
