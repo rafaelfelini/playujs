@@ -67,8 +67,7 @@ When you need to include an template you <b>MUST</b> use the #{escapejs 'yourtem
 
 Example:
 
-bc. 
-$('body').append('#{escapejs "includes/_yourinclude.html" /}');
+bc. $('body').append('#{escapejs "includes/_yourinclude.html" /}');
 $('#someform input[name=user]').val('new vaue');
 
 h3. Ajax events
