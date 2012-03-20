@@ -5,7 +5,7 @@ by *Rafael Felini*
 
 h2. Description
 
-playujs is a port of railsujs, bringing all the features of railsujs to play.
+playujs is a port of jquery-ujs of Ruby on Rails to Play! Framework.
 
 h2. Prerequisites
 
