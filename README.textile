@@ -1,0 +1,89 @@
+h1. Play! Framework unobtrusive scripting adapter for jQuery
+
+by *Rafael Felini*
+"http://github.com/rafaelfelini":http://github.com/rafaelfelini
+
+h2. Description
+
+playujs is a port of railsujs, bringing all the features of railsujs to play.
+
+h2. Prerequisites
+
+Play! 1.2.x
+jQuery 1.6.0 or later
+
+
+h2. Install the module
+
+Install the playujs module from the modules repository:
+
+bc. play install playujs
+
+
+h2. Enable the module
+
+After installing the module, add the following to your conf/dependencies.yml to enable it (don't forget to run play dependencies):
+
+bc. require:
+	- play -> playujs
+
+
+h2. Usage
+
+h3. Javascript
+
+* Import jQuery 1.6.0 or later
+
+bc. <script src="@{'/public/javascripts/jquery-[version].js'}" type="text/javascript"></script>
+        
+* Import play.js
+
+bc. <script src="@{'/public/javascripts/play.js'}" type="text/javascript"></script>
+
+h3. Html
+
+To perform a ajax you need to use the 'data-remote' attribute on some html elements like, a, form, select, input and textarea.
+For select, input and textarea de ajax will be triggered on onchange event of the element.
+
+In a link it would be:
+
+bc. <a href="@{Application.index()}" data-remote="true" data-disable-with="Wait" >Go!</a>
+
+In a form:
+
+bc. <form id="withajax" action="@{Application.index()}" method="post" data-remote="true">
+	<input name="param" type="text" value="value" />		
+	<input type="submit" data-disable-with="Performing ajax..." value="Go!" />
+</form>
+
+h3. Controller
+
+In your controller just call render(); than Play! will automaticaly render the .json template, using content negotiation feature "http://www.playframework.org/documentation/1.2.4/routes#content-negotiation":http://www.playframework.org/documentation/1.2.4/routes#content-negotiation
+
+h3. Template
+
+Here live the fun. In your .json template you will write your javascript that will be executed in the client. And here you can do what you want, trigger an effect, update areas, etc.
+When you need to include an template you <b>MUST</b> use the #{escapejs 'yourtemplate.html' /} , that will escapes carriage returns and single and double quotes for JavaScript segments, ensuring that will be a valid javascript.
+
+Example:
+
+bc. 
+$('body').append('#{escapejs "includes/_yourinclude.html" /}');
+$('#someform input[name=user]').val('new vaue');
+
+h3. Ajax events
+
+"https://github.com/rails/jquery-ujs/wiki/ajax":https://github.com/rails/jquery-ujs/wiki/ajax
+
+h2. Source Code
+
+On GitHub "https://github.com/rafaelfelini/playujs":https://github.com/rafaelfelini/playujs
+
+h2. Examples of usage
+
+On GitHub "https://github.com/rafaelfelini/playujs-samples":https://github.com/rafaelfelini/playujs-samples
+
+
+h2. Credits
+
+* "https://github.com/rails/jquery-ujs/wiki":https://github.com/rails/jquery-ujs/wiki team for the great work with rails.js
