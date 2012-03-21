@@ -63,7 +63,7 @@ In your controller just call render(); then Play! will automaticaly render the .
 h3. Template
 
 Here lies the fun. In your .json template you will write your javascript that will be executed on the client. And here you can do what you want, trigger an effect, update areas, etc.
-When you need to include an template you <b>MUST</b> use the #{escapejs 'yourtemplate.html' /} , that will escapes carriage returns and single and double quotes for JavaScript segments, ensuring that will be a valid javascript.
+When you need to include a template you <b>MUST</b> use the #{escapejs 'yourtemplate.html' /} , that will escapes carriage returns, single and double quotes for JavaScript segments, ensuring that will be a valid javascript.
 
 Example:
 
