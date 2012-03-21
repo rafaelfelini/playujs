@@ -80,7 +80,7 @@ On GitHub "https://github.com/rafaelfelini/playujs":https://github.com/rafaelfel
 
 h2. Examples of usage
 
-On GitHub "https://github.com/rafaelfelini/playujs-samples":https://github.com/rafaelfelini/playujs-samples
+On GitHub "https://github.com/rafaelfelini/playujs-examples":https://github.com/rafaelfelini/playujs-examples
 
 h2. Credits
 
